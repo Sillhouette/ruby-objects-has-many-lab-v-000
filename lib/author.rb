@@ -11,17 +11,19 @@ class Author
 
   def add_post(post)
     @posts << post;
+    @@all += 1;
     post.author = self;
   end
 
   def add_post_by_title(title)
     post = Post.new(title);
     @posts << post;
+    @@all += 1;
     post.author = self;
   end
 
   def self.post_count
-    @posts.length
+    @@all.length
   end
 
 end
