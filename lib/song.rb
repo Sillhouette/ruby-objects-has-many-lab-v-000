@@ -1,18 +1,18 @@
 class Song
 
-  attr_accessor :title, :artist
+  attr_accessor :name, :artist
 
-  @@all = [] 
+  @@all = []
 
-  def initialize(title)
-    @title = title;
+  def initialize(name)
+    @name = name;
   end
 
   def artist_name
     self.artist.name;
   end
 
-  def self.song_count
+  def self.all
     @@all;
   end
 
