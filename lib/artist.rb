@@ -5,7 +5,7 @@ class Artist
   @@all = 0;
 
   def initialize(name)
-    @name = name;
+    @name = nil;
     @songs = [];
   end
 
