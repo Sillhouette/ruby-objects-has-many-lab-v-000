@@ -11,17 +11,19 @@ class Artist
 
   def add_song(song)
     @songs << song;
+    @@all += 1;
     song.artist = self;
   end
 
   def add_song_by_name(name)
     song = Song.new(name);
     @songs << song;
+    @@all += 1;
     song.artist = self;
   end
 
   def self.song_count
-    @songs.length
+    @@all;
   end
 
 end
